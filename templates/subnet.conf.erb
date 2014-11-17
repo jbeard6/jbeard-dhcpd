@@ -1,0 +1,27 @@
+subnet <%= @network %> netmask <%= @netmask %> {
+<% if @authoritative -%>
+    authoritative;
+
+    range   <%= @range %>;
+    option  subnet-mask         <%= @netmask %>;
+    option  broadcast-address   <%= @broadcast %>;
+
+<% if defined?(@routers) -%>
+    option  routers             <%= @routers.is_a?(Array) ? @routers.join(', ') : @routers %>;
+<% end -%>
+
+<% if defined?(@nameservers) -%>
+    option  domain-name-servers <%= @nameservers.is_a?(Array) ? @nameservers.join(', ') : @nameservers %>;
+<% end -%>
+
+<% if defined?(@ntpservers) -%>
+    option  ntp-servers         <% @ntpservers.is_a?(Array) ? @ntpservers.join(', ') : @ntpservers %>;
+<% end -%>
+
+    default-lease-time  <%= @lease_default %>;
+    max-lease-time      <%= @lease_max %>;
+<% else -%>
+    not authoritative;
+<% end -%>
+}
+

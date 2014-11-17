@@ -1,0 +1,23 @@
+# dhcpd.conf
+#
+# DHCP Server Configuration file.
+#
+
+authoritative;
+
+option  domain-name         "<%= @domain %>";
+option  domain-search       "<%= @search.is_a?(Array) ? @search.join('", "') : @search %>";
+
+ddns-updates                <%= @ddns_updates ? 'on' : 'off' %>;
+ddns-update-style           <%= @ddns_update_style %>;
+update-static-leases        <%= @ddns_update_static %>;
+<%= @ddns_client_updates %> client-updates;
+
+<% if @include.is_a?(Array) -%>
+<% @include.each do |path| -%>
+include "<%= path %>";
+<% end -%>
+<% else -%>
+include "<%= @include %>";
+<% end -%>
+
