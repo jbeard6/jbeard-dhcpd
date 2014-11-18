@@ -87,9 +87,10 @@ _TODO_ List all the classes and organization
 ## Limitations
 
 This module has been tested on:
-    * RedHat Enterprise Linux 6
-    * CentOS 6
-    * Debian Wheezy
+
+  * RedHat Enterprise Linux 6
+  * CentOS 6
+  * Debian Wheezy
 
 ## Development
 
