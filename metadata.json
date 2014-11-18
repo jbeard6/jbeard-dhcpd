@@ -1,6 +1,6 @@
 {
   "name": "jbeard-dhcpd",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "Joseph Beard",
   "summary": "Simple provisioner for the ISC dhcpd daemon.",
   "license": "Apache 2.0",

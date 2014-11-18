@@ -5,7 +5,7 @@ class dhcpd::host (
     $conf_file = $dhcpd::conf_file,
 ) {
 
-    include stdlib;
+    include stdlib
 
     concat::fragment { "${conf_file}#host${title}":
         target  => $conf_file,
