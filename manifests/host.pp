@@ -1,8 +1,8 @@
 class dhcpd::host (
     $hardware,
     $address,
-    $hostname  => $title,
-    $conf_file => $dhcpd::conf_file,
+    $hostname  = $title,
+    $conf_file = $dhcpd::conf_file,
 ) {
 
     include stdlib;

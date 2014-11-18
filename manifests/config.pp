@@ -1,5 +1,5 @@
 class dhcpd::config (
-    $ensure    = $dhcpd::ensure,
+    $ensure             = $dhcpd::ensure,
     $conf_file          = $dhcpd::conf_file,
     $ddns_updates       = $dhcpd::ddns_updates,
     $ddns_update_style  = $dhcpd::ddns_update_style,

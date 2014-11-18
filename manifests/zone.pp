@@ -1,7 +1,7 @@
 define dhcpd::zone (
-    $domain = $title,
     $nameserver,
     $key,
+    $domain    = $title,
     $conf_file = $dhcpd::conf_file,
 ) {
 
