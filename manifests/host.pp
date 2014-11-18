@@ -1,4 +1,4 @@
-class dhcpd::host (
+define dhcpd::host (
     $hardware,
     $address,
     $hostname  = $title,
