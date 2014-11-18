@@ -1,6 +1,6 @@
 {
   "name": "jbeard-dhcpd",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Joseph Beard",
   "summary": "Simple provisioner for the ISC dhcpd daemon.",
   "license": "Apache 2.0",
@@ -8,7 +8,14 @@
   "project_page": "https://github.com/jbeard6/jbeard-dhcpd",
   "issues_url": "https://github.com/jbeard6/jbeard-dhcpd/issues",
   "dependencies": [
-    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+    {
+      "name":"puppetlabs-stdlib",
+      "version_requirement":">= 4.0.0"
+    },
+    {
+      "name":"puppetlabs-concat",
+      "version_requirement":">= 1.0.0"
+    }
   ]
 }
 
